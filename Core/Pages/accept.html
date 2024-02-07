@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elle a dit OUIIII!!!!!!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #ffc0cb; /* Couleur de fond */
+      overflow: hidden; /* Empêche les éléments de dépasser de l'écran */
+      position: relative; /* Nécessaire pour les positions absolues des éléments */
+    }
+
+    .header {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .cute-thing {
+      font-size: 24px;
+      color: #ff1493; /* Couleur du texte */
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>ELLE A DIT OUIIII!!!!!!</h1>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const cuteThings = [
+        "Tu es ma lumière dans le noir.",
+        "Mon amour pour toi est plus profond que l'océan.",
+        "Tu es la meilleure chose qui me soit jamais arrivée.",
+        // Ajoutez d'autres messages mignons ici
+        "Tu fais battre mon cœur plus fort chaque jour.",
+        "Chaque moment avec toi est un cadeau précieux.",
+        "Je t'aime plus que les mots ne peuvent le dire.",
+        "Mon amour pour toi est infini comme le ciel étoilé.",
+        "À tes côtés, chaque jour est un jour de Saint-Valentin.",
+        "Tu es la raison de mon sourire tous les jours.",
+        "Tu es mon âme sœur, mon compagnon de vie.",
+        "Je veux passer ma vie entière à tes côtés.",
+        "Mon amour pour toi grandit chaque jour.",
+        "Tu rends ma vie belle et pleine de bonheur.",
+        "Je suis reconnaissant(e) de t'avoir dans ma vie."
+      ];
+
+      // Fonction pour générer une position aléatoire
+      function getRandomPosition(max) {
+        return Math.floor(Math.random() * max) + "px";
+      }
+
+      // Générer et afficher les "cute things"
+      cuteThings.forEach(function(message) {
+        const cuteThing = document.createElement("div");
+        cuteThing.textContent = message;
+        cuteThing.classList.add("cute-thing");
+        cuteThing.style.left = getRandomPosition(window.innerWidth);
+        cuteThing.style.top = getRandomPosition(window.innerHeight);
+        document.body.appendChild(cuteThing);
+      });
+    });
+  </script>
+</body>
+</html>

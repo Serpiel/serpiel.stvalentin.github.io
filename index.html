@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carte de la Saint-Valentin</title>
+  <link rel="stylesheet" href="Core/CSS/style_valentin.css">
+</head>
+<body>
+    <div class="background-image"></div>
+  <div class="envelope-container">
+    <div class="envelope" id="envelope">
+      <div class="front">
+        <img src="https://www.pngkey.com/png/full/759-7590926_mail-envelope-icon-png-free-photo-email-icon.png" alt="envelope">
+      </div>
+      <div class="back">
+        <p>Cliquez pour ouvrir</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup" id="popup">
+    <div class="message">
+      <p>Veux-tu être ma Valentine ?</p>
+      <button onclick="window.location.href='Core/Pages/accept.html'">Oui</button>
+      <button onclick="teleportButton()">Non</button>
+    </div>
+  </div>
+
+  <script src="Interactions/script.js"></script>
+</body>
+</html>
